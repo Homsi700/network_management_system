@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام إدارة الشبكة - لوحة التحكم</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- غيِّر هذه الأسطر فقط في head -->
+    <link rel="stylesheet" href="/assets/css/styles.css">  <!-- أضف / في البداية -->
+
+    <!-- وفي نهاية الملف -->
+    <script src="/assets/js/dashboard.js"></script>  <!-- أضف / في البداية -->
+    
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Sidebar -->
+    <aside class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg transition-transform z-50">
+        <div class="p-4">
+            <div class="flex items-center justify-center mb-8">
+                <div class="w-12 h-12 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-network-wired text-xl text-white"></i>
+                </div>
+                <h1 class="text-xl font-bold mr-3">نظام إدارة الشبكة</h1>
+            </div>
+            
+            <nav class="space-y-2">
+                <a href="#" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 active:bg-blue-50 group">
+                    <i class="fas fa-home w-6 text-gray-500 group-hover:text-blue-600"></i>
+                    <span class="mr-3">الرئيسية</span>
+                </a>
+                <a href="#" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 group">
+                    <i class="fas fa-server w-6 text-gray-500 group-hover:text-blue-600"></i>
+                    <span class="mr-3">السيرفرات</span>
+                </a>
+                <a href="#" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 group">
+                    <i class="fas fa-broadcast-tower w-6 text-gray-500 group-hover:text-blue-600"></i>
+                    <span class="mr-3">الأبراج</span>
+                </a>
+                <a href="#" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 group">
+                    <i class="fas fa-users w-6 text-gray-500 group-hover:text-blue-600"></i>
+                    <span class="mr-3">المستخدمين</span>
+                </a>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="mr-64 p-8">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-8">
+            <div>
+                <h1 class="text-2xl font-bold text-gray-800">لوحة التحكم</h1>
+                <p class="text-gray-600">مرحباً بك في نظام إدارة الشبكة</p>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <!-- Notifications -->
+                <button class="relative p-2 text-gray-600 hover:text-blue-600 transition-colors">
+                    <i class="fas fa-bell text-xl"></i>
+                    <span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
+                </button>
+                
+                <!-- User Menu -->
+                <div class="relative">
+                    <button class="flex items-center gap-2 p-2 text-gray-600 hover:text-blue-600 transition-colors">
+                        <span class="text-sm">اسم المستخدم</span>
+                        <img src="https://via.placeholder.com/32" class="w-8 h-8 rounded-full">
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <!-- Total Servers Card -->
+            <div class="bg-white rounded-lg shadow-md p-6 border-r-4 border-blue-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">إجمالي السيرفرات</p>
+                        <h3 class="text-2xl font-bold text-gray-800">12</h3>
+                    </div>
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-server text-xl text-blue-600"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active Towers Card -->
+            <div class="bg-white rounded-lg shadow-md p-6 border-r-4 border-green-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">الأبراج النشطة</p>
+                        <h3 class="text-2xl font-bold text-gray-800">8</h3>
+                    </div>
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-broadcast-tower text-xl text-green-600"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Total Users Card -->
+            <div class="bg-white rounded-lg shadow-md p-6 border-r-4 border-purple-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">المستخدمين النشطين</p>
+                        <h3 class="text-2xl font-bold text-gray-800">254</h3>
+                    </div>
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-users text-xl text-purple-600"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Status Card -->
+            <div class="bg-white rounded-lg shadow-md p-6 border-r-4 border-yellow-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">حالة النظام</p>
+                        <h3 class="text-2xl font-bold text-gray-800">نشط</h3>
+                    </div>
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-signal text-xl text-yellow-600"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Servers and Towers Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Servers Section -->
+            <section>
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-xl font-bold text-gray-800">السيرفرات</h2>
+                    <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
+                        <i class="fas fa-plus"></i>
+                        <span>إضافة سيرفر</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Server Card -->
+                    <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-server text-blue-600"></i>
+                                </div>
+                                <div class="mr-3">
+                                    <h3 class="font-bold text-gray-800">سيرفر رقم 1</h3>
+                                    <p class="text-sm text-gray-500">192.168.1.1</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="px-2 py-1 bg-green-100 text-green-600 text-sm rounded-full">نشط</span>
+                                <button class="text-gray-400 hover:text-blue-600"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-sm text-gray-500">المستخدمين</p>
+                                <p class="font-bold">125</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">الحالة</p>
+                                <p class="font-bold text-green-600">مستقر</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add more server cards here -->
+                </div>
+            </section>
+
+            <!-- Towers Section -->
+            <section>
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-xl font-bold text-gray-800">الأبراج</h2>
+                    <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
+                        <i class="fas fa-plus"></i>
+                        <span>إضافة برج</span>
+                    </button>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Tower Card -->
+                    <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-broadcast-tower text-purple-600"></i>
+                                </div>
+                                <div class="mr-3">
+                                    <h3 class="font-bold text-gray-800">برج الشمال</h3>
+                                    <p class="text-sm text-gray-500">192.168.2.1</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-600 text-sm rounded-full">إشارة ضعيفة</span>
+                                <button class="text-gray-400 hover:text-blue-600"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4">
+                            <div>
+                                <p class="text-sm text-gray-500">قوة الإشارة</p>
+                                <p class="font-bold">-65 dBm</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">العملاء</p>
+                                <p class="font-bold">45</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">التردد</p>
+                                <p class="font-bold">5.8 GHz</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add more tower cards here -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Alerts Container -->
+        <div id="alertsContainer" class="fixed bottom-4 left-4 z-50 space-y-4">
+            <!-- Example Alert -->
+            <div class="max-w-md bg-white rounded-lg shadow-lg p-4 flex items-start border-r-4 border-yellow-500 transform transition-all hover:scale-102">
+                <div class="flex-shrink-0 w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center ml-4">
+                    <i class="fas fa-exclamation-triangle text-yellow-600"></i>
+                </div>
+                <div class="flex-1">
+                    <h4 class="font-bold text-gray-800 mb-1">تنبيه!</h4>
+                    <p class="text-gray-600 text-sm">تم اكتشاف إشارة ضعيفة في برج الشمال</p>
+                </div>
+                <button class="text-gray-400 hover:text-gray-600 mr-2">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript for WebSocket connection and dynamic updates -->
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

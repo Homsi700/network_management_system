@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: network_management_system
+Version: 1.0.0
+Summary: نظام إدارة شبكة الإنترنت المحلية
+Author: Network Management System Team
+Author-email: admin@networkmanager.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi==0.68.1
+Requires-Dist: uvicorn[standard]==0.15.0
+Requires-Dist: h11>=0.12.0
+Requires-Dist: sqlalchemy==1.4.23
+Requires-Dist: websockets==10.0
+Requires-Dist: python-dotenv==0.19.0
+Requires-Dist: paramiko==2.8.1
+Requires-Dist: routeros-api==0.17.0
+Requires-Dist: requests==2.26.0
+Requires-Dist: pydantic==1.8.2
+Requires-Dist: python-multipart==0.0.5
+Requires-Dist: aiofiles==0.7.0
+Requires-Dist: python-jose[cryptography]
+Requires-Dist: passlib[bcrypt]
+Requires-Dist: jinja2
+Requires-Dist: watchdog
+Requires-Dist: psutil
+Requires-Dist: apscheduler
+Dynamic: author
+Dynamic: author-email
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

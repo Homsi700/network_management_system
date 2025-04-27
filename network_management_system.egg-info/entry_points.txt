@@ -1,0 +1,2 @@
+[console_scripts]
+network-manager = backend.main:start_server

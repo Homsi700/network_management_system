@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام إدارة الشبكة - تسجيل الدخول</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-gradient-to-br from-blue-500 to-indigo-600 min-h-screen flex items-center justify-center">
+    <div class="container mx-auto px-4">
+        <div class="max-w-md mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+            <!-- Login Header -->
+            <div class="p-8 text-center">
+                <div class="w-20 h-20 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+                    <i class="fas fa-network-wired text-3xl text-white"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">مرحباً بك</h2>
+                <p class="text-gray-600">قم بتسجيل الدخول للوصول إلى لوحة التحكم</p>
+            </div>
+
+            <!-- Login Form -->
+            <div class="p-8 pt-0">
+                <form id="loginForm" class="space-y-6">
+                    <div class="space-y-2">
+                        <label for="username" class="block text-sm font-medium text-gray-700">اسم المستخدم</label>
+                        <div class="relative">
+                            <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <input type="text" id="username" name="username" 
+                                class="block w-full pr-10 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" 
+                                placeholder="أدخل اسم المستخدم">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="password" class="block text-sm font-medium text-gray-700">كلمة المرور</label>
+                        <div class="relative">
+                            <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <input type="password" id="password" name="password" 
+                                class="block w-full pr-10 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" 
+                                placeholder="أدخل كلمة المرور">
+                            <button type="button" id="togglePassword" 
+                                class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between"></div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="remember" name="remember" 
+                                class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                            <label for="remember" class="mr-2 block text-sm text-gray-700">تذكرني</label>
+                        </div>
+                        <a href="#" class="text-sm text-blue-600 hover:text-blue-800">نسيت كلمة المرور؟</a>
+                    </div>
+
+                    <button type="submit" 
+                        class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 rounded-lg hover:opacity-90 transition-all focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        تسجيل الدخول
+                    </button>
+                </form>
+
+                <!-- Error Alert -->
+                <div id="errorAlert" class="hidden mt-4 bg-red-100 border-r-4 border-red-500 text-red-700 p-4 rounded-lg">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <div class="mr-3">
+                            <p class="text-sm">خطأ في اسم المستخدم أو كلمة المرور</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <p class="text-center text-white mt-6">
+            جميع الحقوق محفوظة © 2025
+        </p>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+</body>
+</html>
