@@ -24,7 +24,7 @@
 
 2. قم بتنزيل أو استنساخ المشروع:
    ```bash
-   git clone https://github.com/yourusername/network_management_system.git
+   git clone [https://github.com/Homsi700/network_management_system.git
    cd network_management_system
    ```
 
